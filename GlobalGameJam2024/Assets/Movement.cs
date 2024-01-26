@@ -5,11 +5,11 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] float speed = 1;
+    [SerializeField] float speed = 250;
     [SerializeField] Transform groundCheckCollider;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] bool isGrounded = false;
-    [SerializeField] float jPower = 250;
+    [SerializeField] float jPower = 400;
     Rigidbody2D r;
     float hvalue;
     bool jump = false;
