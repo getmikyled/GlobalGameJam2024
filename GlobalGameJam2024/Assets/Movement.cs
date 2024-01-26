@@ -5,36 +5,64 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float speed = 1;
-
+    [SerializeField] float speed = 1;
+    [SerializeField] Transform groundCheckCollider;
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] bool isGrounded = false;
+    [SerializeField] float jPower = 250;
     Rigidbody2D r;
     float hvalue;
+    bool jump = false;
+    const float gCheckRadius = 0.1f;
 
     private void Awake()
     {
         r = GetComponent<Rigidbody2D>();
-    }
-    void Start()
-    {
-        
-
     }
 
     // Update is called once per frame
     void Update()
     {
         hvalue = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            jump = true;
+        }else if (Input.GetButtonUp("Jump"))
+        {
+            jump = false;
+        }
     }
 
     private void FixedUpdate()
     {
-        Move(hvalue);
+        GroundCheck();
+        Move(hvalue,jump);
     }
 
-    void Move(float dir)
+    void GroundCheck()
     {
-        float xvelocity = speed * dir * Time.deltaTime;
+        isGrounded = false;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckCollider.position, gCheckRadius, groundLayer);
+        if (colliders.Length > 0)
+        {
+            isGrounded = true;
+        }
+    }
+
+
+
+    void Move(float dir, bool jFlag)
+    {
+        float xvelocity = speed * dir * Time.fixedDeltaTime;
         Vector2 targetVelocity = new Vector2(xvelocity, r.velocity.y);
         r.velocity = targetVelocity;
+
+        if (isGrounded && jFlag)
+        {
+            isGrounded = false;
+            jFlag = false;
+            r.AddForce(new Vector2(0f, jPower));
+        }
     }
 }
