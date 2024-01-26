@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float speed = 1;
 
     Rigidbody2D r;
     float hvalue;
@@ -32,7 +33,8 @@ public class Movement : MonoBehaviour
 
     void Move(float dir)
     {
-        Vector2 targetVelocity = new Vector2(dir, r.velocity.y);
+        float xvelocity = speed * dir * Time.deltaTime;
+        Vector2 targetVelocity = new Vector2(xvelocity, r.velocity.y);
         r.velocity = targetVelocity;
     }
 }
