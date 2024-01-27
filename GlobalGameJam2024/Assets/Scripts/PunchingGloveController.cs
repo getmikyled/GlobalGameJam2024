@@ -18,7 +18,7 @@ namespace GlobalGameJam2024
                 Vector2 forceDirection = other.transform.position - transform.position;
                 forceDirection.Normalize();
 
-                other.rigidbody.AddForce(forceDirection * punchStrength, ForceMode2D.Impulse);
+                StartCoroutine(other.transform.GetComponent<PlayerCharacterController>().Knockback(forceDirection, punchStrength));
             }
         }
     }
