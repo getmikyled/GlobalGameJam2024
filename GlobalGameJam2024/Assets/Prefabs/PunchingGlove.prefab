@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 769809166464083922}
-  - component: {fileID: 4637993070255885884}
   - component: {fileID: 1991099522897349161}
+  - component: {fileID: 1379368011634622783}
   m_Layer: 0
   m_Name: PunchingGlove
   m_TagString: Untagged
@@ -35,7 +35,20 @@ Transform:
   - {fileID: 6545707561131996803}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &4637993070255885884
+--- !u!114 &1991099522897349161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4525795382463345403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f400e5162c57dc9499ec4b6819e6c00c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gloveGizmoRadius: 0.48
+--- !u!95 &1379368011634622783
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -56,19 +69,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1991099522897349161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4525795382463345403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f400e5162c57dc9499ec4b6819e6c00c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gloveGizmoRadius: 0.48
 --- !u!1 &7782569496155722275
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +211,6 @@ GameObject:
   - component: {fileID: 2567173640502198210}
   - component: {fileID: 9105577370849093479}
   - component: {fileID: 393011259326010739}
-  - component: {fileID: 4962502542222106387}
   m_Layer: 0
   m_Name: Glove
   m_TagString: Untagged
@@ -247,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _punchDistance: 4
-  _punchStrength: 2
+  _punchStrength: 8
 --- !u!212 &9105577370849093479
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -335,24 +334,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!95 &4962502542222106387
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8695613510395844645}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7289ad957650bfc4db0669c4194d6255, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 1
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
