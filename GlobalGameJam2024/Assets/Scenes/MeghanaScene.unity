@@ -767,7 +767,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1864290326}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -787,18 +787,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166689311}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1893773775}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1864290327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 278.25232, y: 156.55287}
-  m_SizeDelta: {x: 556.5046, y: 313.1057}
+  m_AnchoredPosition: {x: -0.1604, y: 0.093}
+  m_SizeDelta: {x: 17.7094, y: 9.468}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1188570889
 PrefabInstance:
@@ -1130,6 +1130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f05392e3918b48dab18a0d12264de64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bottomBoundary: 0
+  topBoundary: 20
+  leftBoundary: -10
+  rightBoundary: 10
   player: {fileID: 95288255}
 --- !u!114 &1864290324
 MonoBehaviour:
@@ -1246,7 +1250,8 @@ Transform:
   m_LocalPosition: {x: -0.21170807, y: -1.3650486, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1166689315}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1893773774
@@ -1284,8 +1289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -272.1616, y: -153.70525}
-  m_SizeDelta: {x: 4.8158, y: 1.5068}
+  m_AnchoredPosition: {x: -272.22272, y: -154.19603}
+  m_SizeDelta: {x: 4.9381, y: 2.4883}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1893773776
 MonoBehaviour:
@@ -1307,7 +1312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1370,7 +1375,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 281.7394, y: -157.76028, z: -278.55652, w: 158.8538}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1534,5 +1539,4 @@ SceneRoots:
   - {fileID: 1644888011}
   - {fileID: 1843459892}
   - {fileID: 7766548558595064701}
-  - {fileID: 1166689315}
   - {fileID: 2011898792}
