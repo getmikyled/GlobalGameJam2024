@@ -19,10 +19,24 @@ namespace GlobalGameJam2024
         bool facingRight = true;
         const float gCheckRadius = 0.1f;
         Animator animator;
+
+        public int points = 50;
+
+
+        [SerializeField] Transform brokenGlassCheckCollider;
+        [SerializeField] Transform brokenGlass2CheckCollider;
+        [SerializeField] LayerMask glassLayer;
+
+        private SpriteRenderer playerRend;
+
+        bool invinicble = false;
+
+
         private void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
+            playerRend = GetComponent<SpriteRenderer>();
         }
 
         // Update is called once per frame
@@ -43,7 +57,9 @@ namespace GlobalGameJam2024
         private void FixedUpdate()
         {
             GroundCheck();
-            Move(hvalue, jump);
+            BrokenGlassRightCheck();
+            BrokenGlassLeftCheck();
+            Move(hvalue,jump);
         }
 
         void GroundCheck()
@@ -55,6 +71,50 @@ namespace GlobalGameJam2024
                 isGrounded = true;
             }
         }
+
+        void BrokenGlassRightCheck()
+        {
+
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(brokenGlassCheckCollider.position, gCheckRadius, glassLayer);
+
+            if (colliders.Length > 0)
+            {
+                if (colliders[0].CompareTag("BrokenGlass") && !invinicble)
+                {
+
+                    points -= 10;
+                    StartCoroutine(sinvincible());
+                }
+            }
+        }
+
+        void BrokenGlassLeftCheck()
+        {
+
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(brokenGlass2CheckCollider.position, gCheckRadius, glassLayer);
+
+            if (colliders.Length > 0 )
+            {
+                if (colliders[0].CompareTag("BrokenGlass") && !invinicble)
+                {
+                    points -= 10;
+                    StartCoroutine(sinvincible());
+                }
+            }
+        }
+
+    private IEnumerator sinvincible()
+    {
+        invinicble = true;
+        for(int i = 0; i < 4; i++)
+        {
+            playerRend.color = new Color(1, 0, 0, 0.5f);
+            yield return new WaitForSeconds(0.25f);
+            playerRend.color = Color.white;
+            yield return new WaitForSeconds(0.25f);
+        }
+        invinicble = false;
+    }
 
         void Move(float dir, bool jFlag)
         {
