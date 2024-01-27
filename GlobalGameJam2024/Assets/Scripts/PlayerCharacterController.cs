@@ -151,6 +151,7 @@ namespace GlobalGameJam2024
             rb.AddForce(forceDirection * punchStrength, ForceMode2D.Impulse);
             yield return new WaitUntil(() => Mathf.Abs(rb.velocity.x) == 0);
             isKnockbacked = false;
+            points += 10;
         }
     }
 }
