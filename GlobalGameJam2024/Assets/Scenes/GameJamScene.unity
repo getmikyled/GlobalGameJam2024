@@ -1004,7 +1004,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   isGrounded: 0
-  jPower: 250
+  jPower: 200
 --- !u!50 &1442113300
 Rigidbody2D:
   serializedVersion: 4
