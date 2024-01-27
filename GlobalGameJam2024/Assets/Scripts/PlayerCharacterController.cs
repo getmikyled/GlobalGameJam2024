@@ -17,7 +17,7 @@ namespace GlobalGameJam2024
         float hvalue;
         bool jump = false;
         bool facingRight = true;
-        const float gCheckRadius = 0.1f;
+        const float gCheckRadius = 0.01f;
         Animator animator;
 
         public int points = 50;
@@ -118,6 +118,8 @@ namespace GlobalGameJam2024
 
         void Move(float dir, bool jFlag)
         {
+            GroundCheck();
+
             if (isKnockbacked == false)
             {
                 float xvelocity = speed * dir * Time.fixedDeltaTime;
