@@ -9,15 +9,17 @@ public class Movement : MonoBehaviour
     [SerializeField] Transform groundCheckCollider;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] bool isGrounded = false;
-    [SerializeField] float jPower = 400;
+    [SerializeField] float jPower = 200;
     Rigidbody2D r;
     float hvalue;
     bool jump = false;
+    bool facingRight = true;
     const float gCheckRadius = 0.1f;
-
+    Animator animator;
     private void Awake()
     {
         r = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -58,11 +60,20 @@ public class Movement : MonoBehaviour
         Vector2 targetVelocity = new Vector2(xvelocity, r.velocity.y);
         r.velocity = targetVelocity;
 
+        if (facingRight && dir < 0)
+        {
+            transform.localScale = new Vector3(-0.75f, 0.75f, 0.75f);
+            facingRight = false;
+        }else if(!facingRight && dir > 0)
+        {
+            transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+            facingRight = true;
+        }
         if (isGrounded && jFlag)
         {
             isGrounded = false;
-            jFlag = false;
             r.AddForce(new Vector2(0f, jPower));
         }
+        animator.SetFloat("xVelocity", Mathf.Abs(r.velocity.x));
     }
 }
