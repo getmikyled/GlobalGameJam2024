@@ -17,7 +17,7 @@ namespace GlobalGameJam2024
         float hvalue;
         bool jump = false;
         bool facingRight = true;
-        const float gCheckRadius = 0.1f;
+        const float gCheckRadius = 0.05f;
         Animator animator;
         private void Awake()
         {
