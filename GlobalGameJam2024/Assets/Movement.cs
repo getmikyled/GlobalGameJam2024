@@ -113,6 +113,7 @@ public class Movement : MonoBehaviour
 
     void Move(float dir, bool jFlag)
     {
+        
         float xvelocity = speed * dir * Time.fixedDeltaTime;
         Vector2 targetVelocity = new Vector2(xvelocity, r.velocity.y);
         r.velocity = targetVelocity;
@@ -121,11 +122,14 @@ public class Movement : MonoBehaviour
         {
             transform.localScale = new Vector3(-0.75f, 0.75f, 0.75f);
             facingRight = false;
-        }else if(!facingRight && dir > 0)
+        }
+
+        else if(!facingRight && dir > 0)
         {
             transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
             facingRight = true;
         }
+        
         if (isGrounded && jFlag)
         {
             isGrounded = false;
