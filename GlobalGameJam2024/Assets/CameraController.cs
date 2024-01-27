@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    // Camera Boundaries
+    [SerializeField] private float bottomBoundary = 0f;
+    [SerializeField] private float topBoundary = 20f;
+    [SerializeField] private float leftBoundary = -10f;
+    [SerializeField] private float rightBoundary = 10f;
 
     public GameObject player;  // pull the player game object from the game 
 
@@ -16,6 +21,6 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z); //set the position of the camera to where the player moves
+        transform.position = new Vector3(Mathf.Clamp(player.transform.position.x, leftBoundary, rightBoundary), Mathf.Clamp(player.transform.position.y, bottomBoundary, topBoundary), transform.position.z); //set the position of the camera to where the player moves
     }
 }
