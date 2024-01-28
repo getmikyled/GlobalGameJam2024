@@ -21,6 +21,10 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = new Vector3(Mathf.Clamp(player.transform.position.x, leftBoundary, rightBoundary), Mathf.Clamp(player.transform.position.y, bottomBoundary, topBoundary), transform.position.z); //set the position of the camera to where the player moves
+        if(player != null)
+        {
+            transform.position = new Vector3(Mathf.Clamp(player.transform.position.x, leftBoundary, rightBoundary), Mathf.Clamp(player.transform.position.y, bottomBoundary, topBoundary), transform.position.z); //set the position of the camera to where the player moves
+        }
+        
     }
 }

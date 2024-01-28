@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 using GlobalGameJam2024;
 
-
-public class PointCounter : MonoBehaviour
+public class GameOverScreen : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI dist;
     PlayerCharacterController player;
     private void Awake()
     {
         player = GameObject.Find("Player").GetComponent<PlayerCharacterController>(); // intialize basically
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Setup()
     {
-        int points = player.points; // Assuming points is a public variable in the Movement script
-        dist.text = points.ToString();
+        
+        gameObject.SetActive(true);
+        Debug.Log("GameOver");
     }
+
+    public void RestartButton()
+    {
+        SceneManager.LoadScene("MeghanaScene");
+    }
+    
 }
