@@ -48,7 +48,6 @@ namespace GlobalGameJam2024
             rb = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
             playerRend = GetComponent<SpriteRenderer>();
-            Time.timeScale = 1f;
         }
 
         // Update is called once per frame
@@ -77,13 +76,11 @@ namespace GlobalGameJam2024
                 if (points <= 0)
                 {
                     Destroy(GameObject.Find("Player"));
-                    Time.timeScale = 0;
                     GameOver();
                 }
                 if (points >= 100 && !isKnockbacked)
                 {
                     Destroy(GameObject.Find("Player"));
-                    Time.timeScale = 0;
                     GameWon();
                 }
             }
