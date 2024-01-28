@@ -36,7 +36,6 @@ Transform:
   m_Children:
   - {fileID: 3022623215782605504}
   - {fileID: 922429547852511165}
-  - {fileID: 679233699326264988}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7311341291161602972
@@ -123,8 +122,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.08695396}
-  m_Size: {x: 1.375, y: 1.8385684}
+  m_Offset: {x: 0, y: -0.26226616}
+  m_Size: {x: 1.375, y: 1.487944}
   m_Direction: 0
 --- !u!50 &4428209666802830023
 Rigidbody2D:
@@ -196,10 +195,11 @@ MonoBehaviour:
   isKnockbacked: 0
   points: 50
   brokenGlassCheckCollider: {fileID: 922429547852511165}
-  brokenGlass2CheckCollider: {fileID: 679233699326264988}
   glassLayer:
     serializedVersion: 2
     m_Bits: 128
+  GameOverScreen: {fileID: 0}
+  GameWonScreen: {fileID: 0}
 --- !u!1 &4655612949961998114
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,39 +225,8 @@ Transform:
   m_GameObject: {fileID: 4655612949961998114}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8000001, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5651982437256766693}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4797507974348404180
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 679233699326264988}
-  m_Layer: 0
-  m_Name: BrokenGlassCollider2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &679233699326264988
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4797507974348404180}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8000001, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5651982437256766693}
