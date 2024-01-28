@@ -31,10 +31,16 @@ namespace GlobalGameJam2024
         bool invinicble = false;
 
         public GameOverScreen GameOverScreen;
+        public GameOverScreen GameWonScreen;
 
         public void GameOver()
         {
             GameOverScreen.Setup();
+        }
+
+        public void GameWon()
+        {
+            GameWonScreen.Setup();
         }
 
         private void Awake()
@@ -62,7 +68,7 @@ namespace GlobalGameJam2024
 
         private void FixedUpdate()
         {
-            if (gameObject != null)
+            if (gameObject != null && rb != null)
             {
                 BrokenGlassCheck();
                 Move(hvalue, jump);
@@ -72,6 +78,12 @@ namespace GlobalGameJam2024
                     Destroy(GameObject.Find("Player"));
                     Time.timeScale = 0;
                     GameOver();
+                }
+                if (points == 100 && !isKnockbacked)
+                {
+                    Destroy(GameObject.Find("Player"));
+                    Time.timeScale = 0;
+                    GameWon();
                 }
             }
         }
@@ -151,8 +163,11 @@ namespace GlobalGameJam2024
         {
             isKnockbacked = true;
             points += 10;
+
             rb.AddForce(forceDirection * punchStrength, ForceMode2D.Impulse);
+
             yield return new WaitUntil(() => Mathf.Abs(rb.velocity.x) == 0);
+            
             isKnockbacked = false;
         }
     }
