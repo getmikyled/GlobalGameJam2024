@@ -416,13 +416,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchSettingsMigration: 1
   HasSourceProject: 0
-  HasPlatforms: 0
+  HasPlatforms: 1
   sourceProjectPath: ../../../FMOD Studio/GGJ24 FMOD/GGJ24 FMOD.fspro
-  sourceBankPath: Assets/Audio/Desktop
+  sourceBankPath: Assets/FMODBanks
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
-  AutomaticEventLoading: 1
+  AutomaticEventLoading: 0
   BankLoadType: 0
   AutomaticSampleLoading: 0
   EncryptionKey: 
@@ -444,7 +444,11 @@ MonoBehaviour:
   Banks:
   - Music
   - SFX
-  BanksToLoad: []
+  BanksToLoad:
+  - Master
+  - Master.strings
+  - SFX
+  - Music
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
   AndroidUseOBB: 0
