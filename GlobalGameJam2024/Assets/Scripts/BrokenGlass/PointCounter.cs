@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using GlobalGameJam2024;
-
+using FMODUnity;
 
 public class PointCounter : MonoBehaviour
 {
     [SerializeField] RectTransform pointMarker;
-    PlayerCharacterController player;
+
+    [SerializeField] StudioEventEmitter audioManager;
+       PlayerCharacterController player;
 
     private const float markerStartPos = -145f;
     private const float markerEndPos = 25f;
@@ -29,6 +31,8 @@ public class PointCounter : MonoBehaviour
     private void UpdatePoints()
     {
         int points = player.points; // Assuming points is a public variable in the Movement script
+
+        audioManager.EventInstance.setParameterByName("Laugh-o-Meter", points);
         
         pointMarker.anchoredPosition = new Vector3(markerStartPos + (((float)points/100.0f) * 170.0f), 190, pointMarker.position.z);
         Debug.Log(((float)points / 100.0f) * 170.0f);
