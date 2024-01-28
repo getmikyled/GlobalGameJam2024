@@ -55,7 +55,8 @@ namespace GlobalGameJam2024
                 forceDirection.Normalize();
 
                 DisplayPunchline();
-
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Punching Glove");
+       
                 StartCoroutine(OnPunchCallBack());
                 StartCoroutine(other.transform.GetComponent<PlayerCharacterController>().Knockback(forceDirection, punchStrength));
             }
@@ -84,6 +85,7 @@ namespace GlobalGameJam2024
         {
             DisappearFX?.SetActive(false);
             TextChangeFX?.SetActive(false);
+            textMesh.text = joke;
             hasPunched = false;
             hitPlayer = false;
         }

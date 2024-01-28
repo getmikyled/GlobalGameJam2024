@@ -59,6 +59,7 @@ namespace GlobalGameJam2024
             if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Jump");
             }
             else if (Input.GetButtonUp("Jump"))
             {
@@ -73,13 +74,13 @@ namespace GlobalGameJam2024
                 BrokenGlassCheck();
                 Move(hvalue, jump);
 
-                if (points == 0)
+                if (points <= 0)
                 {
                     Destroy(GameObject.Find("Player"));
                     Time.timeScale = 0;
                     GameOver();
                 }
-                if (points == 100 && !isKnockbacked)
+                if (points >= 100 && !isKnockbacked)
                 {
                     Destroy(GameObject.Find("Player"));
                     Time.timeScale = 0;
@@ -87,7 +88,7 @@ namespace GlobalGameJam2024
                 }
             }
         }
-
+        
         void GroundCheck()
         {
             isGrounded = false;
@@ -107,11 +108,14 @@ namespace GlobalGameJam2024
             {
                 if (colliders[0].CompareTag("BrokenGlass") && !invinicble)
                 {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Glass Break");
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Crowd Boo");
 
                     points -= 10;
                     StartCoroutine(sinvincible());
                 }
             }
+            
         }
 
     private IEnumerator sinvincible()
@@ -164,9 +168,14 @@ namespace GlobalGameJam2024
             isKnockbacked = true;
             points += 10;
 
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Crowd Laugh");
+
             rb.AddForce(forceDirection * punchStrength, ForceMode2D.Impulse);
 
-            yield return new WaitUntil(() => Mathf.Abs(rb.velocity.x) == 0);
+            if (rb != null)
+            {
+                yield return new WaitUntil(() => Mathf.Abs(rb.velocity.x) == 0);
+            }
             
             isKnockbacked = false;
         }
