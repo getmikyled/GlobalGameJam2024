@@ -54,33 +54,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
---- !u!114 &-7767203441913466990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Game Over
-  m_EditorClassIdentifier: 
-  Path: event:/Game Over
-  Guid:
-    Data1: -710778820
-    Data2: 1288485751
-    Data3: -341272131
-    Data4: -1118269143
-  Banks:
-  - {fileID: 9208784251904723850}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-7481110898835408608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,10 +89,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638420406560000000
+  lastModified: 638420410880000000
   FileSizes:
   - Name: Desktop
-    Value: 1284
+    Value: 1234
   Exists: 1
 --- !u!114 &-6678460114433139229
 MonoBehaviour:
@@ -390,7 +363,6 @@ MonoBehaviour:
   - {fileID: -3160472645099123821}
   - {fileID: -8429435993304172611}
   - {fileID: 7924635184732438467}
-  - {fileID: -7767203441913466990}
   - {fileID: 7989568424485620445}
   - {fileID: -1546093750619412483}
   - {fileID: 5229804624012126789}
@@ -399,7 +371,7 @@ MonoBehaviour:
   - {fileID: -5638453451229720846}
   StringsBanks:
   - {fileID: -7261035869667983499}
-  cacheTime: 638420406560000000
+  cacheTime: 638420410900000000
   cacheVersion: 131609
 --- !u!114 &1160070577617938136
 MonoBehaviour:
@@ -638,7 +610,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638420406560000000
+  lastModified: 638420410900000000
   FileSizes:
   - Name: Desktop
     Value: 3342656
@@ -874,8 +846,8 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638420406560000000
+  lastModified: 638420410900000000
   FileSizes:
   - Name: Desktop
-    Value: 397216
+    Value: 347616
   Exists: 1
