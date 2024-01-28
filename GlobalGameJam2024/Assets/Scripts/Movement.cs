@@ -42,7 +42,8 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-        }else if (Input.GetButtonUp("Jump"))
+        }
+        else if (Input.GetButtonUp("Jump"))
         {
             jump = false;
         }
@@ -51,8 +52,9 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         GroundCheck();
-      //  BrokenGlassRightCheck();
-       // BrokenGlassLeftCheck();
+        BrokenGlassRightCheck();
+        BrokenGlassLeftCheck();
+
         Move(hvalue,jump);
     }
 
@@ -66,7 +68,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-   /* void BrokenGlassRightCheck()
+    void BrokenGlassRightCheck()
     {
 
        Collider2D[] colliders = Physics2D.OverlapCircleAll(brokenGlassCheckCollider.position, glassRadius, glassLayer);
@@ -96,19 +98,19 @@ public class Movement : MonoBehaviour
             }
         }
     }
-*/
-private IEnumerator sinvincible()
-    {
-        invinicble = true;
-        for(int i = 0; i < 4; i++)
+
+    private IEnumerator sinvincible()
         {
-            playerRend.color = new Color(1, 0, 0, 0.5f);
-            yield return new WaitForSeconds(0.25f);
-            playerRend.color = Color.white;
-            yield return new WaitForSeconds(0.25f);
+            invinicble = true;
+            for(int i = 0; i < 4; i++)
+            {
+                playerRend.color = new Color(1, 0, 0, 0.5f);
+                yield return new WaitForSeconds(0.25f);
+                playerRend.color = Color.white;
+                yield return new WaitForSeconds(0.25f);
+            }
+            invinicble = false;
         }
-        invinicble = false;
-    }
 
 
 
@@ -134,7 +136,7 @@ private IEnumerator sinvincible()
         if (isGrounded && jFlag)
         {
             isGrounded = false;
-            r.AddForce(new Vector2(0f, jPower));
+            r.velocity = Vector2.up * jPower;
         }
         animator.SetFloat("xVelocity", Mathf.Abs(r.velocity.x));
     }
