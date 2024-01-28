@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/GGJ24 FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638419723664751339
+  lastModified: 638419751789360863
   FileSizes:
   - Name: Desktop
-    Value: 1010
+    Value: 1046
   Exists: 1
 --- !u!114 &-6678460114433139229
 MonoBehaviour:
@@ -62,7 +62,7 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/GGJ24 FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638419723664726262
+  lastModified: 638419751789337859
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -111,6 +111,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3297279681814332933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Jump
+  m_EditorClassIdentifier: 
+  Path: event:/Jump
+  Guid:
+    Data1: -1690054746
+    Data2: 1321641126
+    Data3: 660276109
+    Data4: 374901276
+  Banks:
+  - {fileID: 1412970583892153984}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,12 +158,13 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 7014998182748072770}
   - {fileID: 1866105053169234857}
+  - {fileID: -3297279681814332933}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6678460114433139229}
   StringsBanks:
   - {fileID: -7481110898835408608}
-  cacheTime: 638419723669297616
+  cacheTime: 638419751789648714
   cacheVersion: 131609
 --- !u!114 &1412970583892153984
 MonoBehaviour:
@@ -153,10 +181,10 @@ MonoBehaviour:
   Path: ../../../FMOD Studio/GGJ24 FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638419723669297616
+  lastModified: 638419751789648714
   FileSizes:
   - Name: Desktop
-    Value: 68512
+    Value: 72192
   Exists: 1
 --- !u!114 &1866105053169234857
 MonoBehaviour:
