@@ -31,12 +31,19 @@ namespace GlobalGameJam2024
 
         bool invinicble = false;
 
+        public GameOverScreen GameOverScreen;
+
+        public void GameOver()
+        {
+            GameOverScreen.Setup();
+        }
 
         private void Awake()
         {
             rb = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
             playerRend = GetComponent<SpriteRenderer>();
+            Time.timeScale = 1f;
         }
 
         // Update is called once per frame
@@ -56,9 +63,18 @@ namespace GlobalGameJam2024
 
         private void FixedUpdate()
         {
-            BrokenGlassRightCheck();
-            BrokenGlassLeftCheck();
-            Move(hvalue,jump);
+            if (gameObject != null)
+            {
+                BrokenGlassCheck();
+                Move(hvalue, jump);
+
+                if (points == 0)
+                {
+                    Destroy(GameObject.Find("Player"));
+                    Time.timeScale = 0;
+                    GameOver();
+                }
+            }
         }
 
         void GroundCheck()

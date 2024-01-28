@@ -6,7 +6,9 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using GlobalGameJam2024;
 
-public class GameOverScreen : MonoBehaviour
+namespace GlobalGameJam2024
+{
+    public class GameOverScreen : MonoBehaviour
 {
     PlayerCharacterController player;
     private void Awake()
@@ -24,5 +26,4 @@ public class GameOverScreen : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
 }
