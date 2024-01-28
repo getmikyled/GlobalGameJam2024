@@ -15034,7 +15034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deactivateWaitTime: 2
   _punchDistance: 4
-  _punchStrength: 4
+  _punchStrength: 3
   AppearFX: {fileID: 3250259536574338213}
   DisappearFX: {fileID: 5454424159848870376}
   TextChangeFX: {fileID: 5158298519172573577}
