@@ -140,7 +140,7 @@ namespace GlobalGameJam2024
             if (isGrounded && jFlag)
             {
                 isGrounded = false;
-                rb.AddForce(new Vector2(0f, jPower));
+                rb.velocity = Vector2.up * jPower;
                 Debug.Log("Jump");
             }
             animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));

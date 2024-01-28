@@ -11943,7 +11943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 250
-  jPower: 300
+  jPower: 5
   groundCheckCollider: {fileID: 1588788886}
   groundLayer:
     serializedVersion: 2
