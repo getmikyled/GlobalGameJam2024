@@ -56,7 +56,6 @@ namespace GlobalGameJam2024
 
         private void FixedUpdate()
         {
-            GroundCheck();
             BrokenGlassRightCheck();
             BrokenGlassLeftCheck();
             Move(hvalue,jump);
@@ -118,7 +117,6 @@ namespace GlobalGameJam2024
 
         void Move(float dir, bool jFlag)
         {
-            GroundCheck();
 
             if (isKnockbacked == false)
             {
@@ -137,10 +135,13 @@ namespace GlobalGameJam2024
                 transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
                 facingRight = true;
             }
+
+            GroundCheck();
             if (isGrounded && jFlag)
             {
                 isGrounded = false;
                 rb.AddForce(new Vector2(0f, jPower));
+                Debug.Log("Jump");
             }
             animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
         }
