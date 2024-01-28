@@ -59,6 +59,7 @@ namespace GlobalGameJam2024
             if (Input.GetButtonDown("Jump"))
             {
                 jump = true;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Jump");
             }
             else if (Input.GetButtonUp("Jump"))
             {
@@ -107,11 +108,12 @@ namespace GlobalGameJam2024
             {
                 if (colliders[0].CompareTag("BrokenGlass") && !invinicble)
                 {
-
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Glass Break");
                     points -= 10;
                     StartCoroutine(sinvincible());
                 }
             }
+            
         }
 
     private IEnumerator sinvincible()

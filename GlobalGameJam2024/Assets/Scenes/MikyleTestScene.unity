@@ -14241,6 +14241,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: 
   Emitters:
+  - Target: {fileID: 0}
+    Params:
+    - Name: Laugh-o-Meter
+      Value: 0
   - Target: {fileID: 1900613060}
     Params:
     - Name: Laugh-o-Meter
