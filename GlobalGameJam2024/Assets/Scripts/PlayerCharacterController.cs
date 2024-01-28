@@ -165,7 +165,7 @@ namespace GlobalGameJam2024
         {
             isKnockbacked = true;
             points += 10;
-
+            
             rb.AddForce(forceDirection * punchStrength, ForceMode2D.Impulse);
 
             if (rb != null)

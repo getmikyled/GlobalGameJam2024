@@ -116,10 +116,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638420377601651499
+  lastModified: 638420393164934426
   FileSizes:
   - Name: Desktop
-    Value: 1240
+    Value: 1284
   Exists: 1
 --- !u!114 &-6678460114433139229
 MonoBehaviour:
@@ -200,10 +200,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638420377601626227
+  lastModified: 638420393164909422
   FileSizes:
   - Name: Desktop
-    Value: 1406
+    Value: 1036
   Exists: 1
 --- !u!114 &-3566219556035173118
 MonoBehaviour:
@@ -221,12 +221,12 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 1476254197
     data2: 4192974423
   Type: 2
-  IsGlobal: 1
+  IsGlobal: 0
   Labels:
   - Menu
   - Gameplay
@@ -314,6 +314,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 323211
+--- !u!114 &-1546093750619412483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Crowd Boo
+  m_EditorClassIdentifier: 
+  Path: event:/Crowd Boo
+  Guid:
+    Data1: 1383597126
+    Data2: 1154570712
+    Data3: -670919526
+    Data4: -1497472279
+  Banks:
+  - {fileID: 9208784251904723850}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1533953155212353138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,16 +391,15 @@ MonoBehaviour:
   - {fileID: -8429435993304172611}
   - {fileID: 7924635184732438467}
   - {fileID: -7767203441913466990}
-  - {fileID: 7029575825865933086}
   - {fileID: 7989568424485620445}
-  EditorParameters:
-  - {fileID: 1160070577617938136}
-  - {fileID: 8113059681931777228}
+  - {fileID: -1546093750619412483}
+  - {fileID: 5229804624012126789}
+  EditorParameters: []
   MasterBanks:
   - {fileID: -5638453451229720846}
   StringsBanks:
   - {fileID: -7261035869667983499}
-  cacheTime: 638420377602350316
+  cacheTime: 638420393165278349
   cacheVersion: 131609
 --- !u!114 &1160070577617938136
 MonoBehaviour:
@@ -508,6 +534,33 @@ MonoBehaviour:
   lastModified: 638419874423763061
   FileSizes: []
   Exists: 1
+--- !u!114 &5229804624012126789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Crowd Laugh
+  m_EditorClassIdentifier: 
+  Path: event:/Crowd Laugh
+  Guid:
+    Data1: -808872253
+    Data2: 1182814683
+    Data3: -485140591
+    Data4: 8141074
+  Banks:
+  - {fileID: 9208784251904723850}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5729375158808700129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,10 +638,10 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638420377602026834
+  lastModified: 638420383715840958
   FileSizes:
   - Name: Desktop
-    Value: 3342784
+    Value: 3342656
   Exists: 1
 --- !u!114 &7007601421782857335
 MonoBehaviour:
@@ -721,7 +774,7 @@ MonoBehaviour:
     data1: 3898769785
     data2: 2733888942
   Type: 0
-  IsGlobal: 1
+  IsGlobal: 0
   Labels: []
   Exists: 1
 --- !u!114 &7924635184732438467
@@ -821,8 +874,8 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638420377602350316
+  lastModified: 638420393165278349
   FileSizes:
   - Name: Desktop
-    Value: 396352
+    Value: 397216
   Exists: 1

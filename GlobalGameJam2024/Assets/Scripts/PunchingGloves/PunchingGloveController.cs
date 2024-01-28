@@ -56,7 +56,7 @@ namespace GlobalGameJam2024
 
                 DisplayPunchline();
                 FMODUnity.RuntimeManager.PlayOneShot("event:/Punching Glove");
-
+       
                 StartCoroutine(OnPunchCallBack());
                 StartCoroutine(other.transform.GetComponent<PlayerCharacterController>().Knockback(forceDirection, punchStrength));
             }
