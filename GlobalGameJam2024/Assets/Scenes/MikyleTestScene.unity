@@ -149,22 +149,26 @@ PrefabInstance:
     - target: {fileID: 1410699935037944266, guid: f4010319d683143498f8c9e545af6700, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1245380822, guid: 9d565ca9799586b4dbfe56a24ee72e23, type: 3}
+      objectReference: {fileID: 1159571579835886704, guid: 9d565ca9799586b4dbfe56a24ee72e23, type: 3}
+    - target: {fileID: 1410699935037944266, guid: f4010319d683143498f8c9e545af6700, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4978535834204658070, guid: f4010319d683143498f8c9e545af6700, type: 3}
       propertyPath: m_Name
       value: BrokenGlass
       objectReference: {fileID: 0}
     - target: {fileID: 6223675554469442285, guid: f4010319d683143498f8c9e545af6700, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6223675554469442285, guid: f4010319d683143498f8c9e545af6700, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6223675554469442285, guid: f4010319d683143498f8c9e545af6700, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6223675554469442285, guid: f4010319d683143498f8c9e545af6700, type: 3}
       propertyPath: m_LocalPosition.x
