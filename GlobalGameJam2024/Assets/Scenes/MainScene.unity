@@ -11050,6 +11050,7 @@ GameObject:
   - component: {fileID: 1119592829}
   - component: {fileID: 1119592828}
   - component: {fileID: 1119592827}
+  - component: {fileID: 1119592830}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -11074,8 +11075,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.746, y: -76}
-  m_SizeDelta: {x: 322.76, y: 207.23}
+  m_AnchoredPosition: {x: -22, y: -119}
+  m_SizeDelta: {x: 215.22, y: 124.393}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1119592827
 MonoBehaviour:
@@ -11153,7 +11154,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cad0d26b6609b5f4caa2bd972cc7f2eb, type: 3}
+  m_Sprite: {fileID: -2027201850, guid: 0d64d83a951354747babad52d98fbb39, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11171,6 +11172,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119592825}
   m_CullTransparentMesh: 1
+--- !u!95 &1119592830
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119592825}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f6710aa191b98445490235d2fa09ac07, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1128857934
 GameObject:
   m_ObjectHideFlags: 0
@@ -11707,7 +11729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13137,6 +13159,7 @@ GameObject:
   - component: {fileID: 1413195743}
   - component: {fileID: 1413195742}
   - component: {fileID: 1413195741}
+  - component: {fileID: 1413195744}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -13161,8 +13184,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11, y: -57}
-  m_SizeDelta: {x: 280.11, y: 208.8}
+  m_AnchoredPosition: {x: -23, y: -86}
+  m_SizeDelta: {x: 231.461, y: 139.667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413195741
 MonoBehaviour:
@@ -13240,7 +13263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a3765d41cfeb9e4cab7177b391eea63, type: 3}
+  m_Sprite: {fileID: -728176606, guid: 822f3d210b352e64a9be55ce39fedeaa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13258,6 +13281,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413195739}
   m_CullTransparentMesh: 1
+--- !u!95 &1413195744
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413195739}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 664df214840d2470d8757e13b29fa835, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1441207514
 GameObject:
   m_ObjectHideFlags: 0
@@ -15021,8 +15065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39.233, y: 93.804}
-  m_SizeDelta: {x: 436.717, y: 187.611}
+  m_AnchoredPosition: {x: 27.711, y: 74.6}
+  m_SizeDelta: {x: 459.761, y: 149.204}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938034946
 MonoBehaviour:
@@ -15056,8 +15100,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
