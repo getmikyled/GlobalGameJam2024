@@ -7,7 +7,7 @@ namespace GlobalGameJam2024
     public class PlayerCharacterController: MonoBehaviour
     {
         [SerializeField] float speed = 250;
-        [SerializeField] float jPower = 5;
+        [SerializeField] float jPower = 200;
 
         [SerializeField] Transform groundCheckCollider;
         [SerializeField] LayerMask groundLayer;
@@ -140,7 +140,9 @@ namespace GlobalGameJam2024
             if (isGrounded && jFlag)
             {
                 isGrounded = false;
+                isKnockbacked = false;
                 rb.velocity = Vector2.up * jPower;
+                Debug.Log("Jump");
             }
             animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
         }
