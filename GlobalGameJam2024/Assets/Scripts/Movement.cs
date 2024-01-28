@@ -21,6 +21,7 @@ public class Movement : MonoBehaviour
     bool jump = false;
     bool facingRight = true;
     const float gCheckRadius = 0.1f;
+    const float glassRadius = 0.01f;
     Animator animator;
 
     private SpriteRenderer playerRend;
@@ -50,8 +51,8 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         GroundCheck();
-        BrokenGlassRightCheck();
-        BrokenGlassLeftCheck();
+      //  BrokenGlassRightCheck();
+       // BrokenGlassLeftCheck();
         Move(hvalue,jump);
     }
 
@@ -65,10 +66,10 @@ public class Movement : MonoBehaviour
         }
     }
 
-    void BrokenGlassRightCheck()
+   /* void BrokenGlassRightCheck()
     {
 
-       Collider2D[] colliders = Physics2D.OverlapCircleAll(brokenGlassCheckCollider.position, gCheckRadius, glassLayer);
+       Collider2D[] colliders = Physics2D.OverlapCircleAll(brokenGlassCheckCollider.position, glassRadius, glassLayer);
 
         if (colliders.Length > 0)
         {
@@ -84,7 +85,7 @@ public class Movement : MonoBehaviour
     void BrokenGlassLeftCheck()
     {
 
-       Collider2D[] colliders = Physics2D.OverlapCircleAll(brokenGlass2CheckCollider.position, gCheckRadius, glassLayer);
+       Collider2D[] colliders = Physics2D.OverlapCircleAll(brokenGlass2CheckCollider.position, glassRadius, glassLayer);
 
         if (colliders.Length > 0 )
         {
@@ -95,8 +96,8 @@ public class Movement : MonoBehaviour
             }
         }
     }
-
-    private IEnumerator sinvincible()
+*/
+private IEnumerator sinvincible()
     {
         invinicble = true;
         for(int i = 0; i < 4; i++)
