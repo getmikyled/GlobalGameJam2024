@@ -20,8 +20,12 @@ public class Audience : MonoBehaviour
         }
     }
 
-    public void PlayAudienceAnimation()
+    public IEnumerator PlayAudienceAnimation()
     {
         animator.Play("Audience");
+
+        yield return new WaitForSeconds(1f);
+
+        animator.Play("Default");
     }
 }

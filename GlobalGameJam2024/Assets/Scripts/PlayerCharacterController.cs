@@ -68,6 +68,11 @@ namespace GlobalGameJam2024
 
         private void FixedUpdate()
         {
+            if (rb.velocity.x == 0)
+            {
+                isKnockbacked = false;
+            }
+
             if (gameObject != null && rb != null)
             {
                 BrokenGlassCheck();
@@ -107,6 +112,7 @@ namespace GlobalGameJam2024
                 {
                     FMODUnity.RuntimeManager.PlayOneShot("event:/Glass Break");
                     FMODUnity.RuntimeManager.PlayOneShot("event:/Crowd Boo");
+                    StartCoroutine(Audience.instance?.PlayAudienceAnimation());
 
                     points -= 10;
                     StartCoroutine(sinvincible());
@@ -166,6 +172,7 @@ namespace GlobalGameJam2024
             points += 10;
 
             FMODUnity.RuntimeManager.PlayOneShot("event:/Crowd Laugh");
+            StartCoroutine(Audience.instance?.PlayAudienceAnimation());
 
             rb.AddForce(forceDirection * punchStrength, ForceMode2D.Impulse);
 
