@@ -109,6 +109,8 @@ namespace GlobalGameJam2024
                 if (colliders[0].CompareTag("BrokenGlass") && !invinicble)
                 {
                     FMODUnity.RuntimeManager.PlayOneShot("event:/Glass Break");
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Crowd Boo");
+
                     points -= 10;
                     StartCoroutine(sinvincible());
                 }
@@ -165,7 +167,9 @@ namespace GlobalGameJam2024
         {
             isKnockbacked = true;
             points += 10;
-            
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Crowd Laugh");
+
             rb.AddForce(forceDirection * punchStrength, ForceMode2D.Impulse);
 
             if (rb != null)
