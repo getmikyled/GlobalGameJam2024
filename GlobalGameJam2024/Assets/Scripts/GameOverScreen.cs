@@ -27,3 +27,4 @@ namespace GlobalGameJam2024
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
+}

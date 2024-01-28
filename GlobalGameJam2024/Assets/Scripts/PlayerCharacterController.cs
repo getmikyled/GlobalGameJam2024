@@ -24,7 +24,6 @@ namespace GlobalGameJam2024
 
 
         [SerializeField] Transform brokenGlassCheckCollider;
-        [SerializeField] Transform brokenGlass2CheckCollider;
         [SerializeField] LayerMask glassLayer;
 
         private SpriteRenderer playerRend;
@@ -87,31 +86,16 @@ namespace GlobalGameJam2024
             }
         }
 
-        void BrokenGlassRightCheck()
+        void BrokenGlassCheck()
         {
 
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(brokenGlassCheckCollider.position, gCheckRadius, glassLayer);
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(brokenGlassCheckCollider.position, brokenGlassCheckCollider.localScale, 0, glassLayer);
 
             if (colliders.Length > 0)
             {
                 if (colliders[0].CompareTag("BrokenGlass") && !invinicble)
                 {
 
-                    points -= 10;
-                    StartCoroutine(sinvincible());
-                }
-            }
-        }
-
-        void BrokenGlassLeftCheck()
-        {
-
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(brokenGlass2CheckCollider.position, gCheckRadius, glassLayer);
-
-            if (colliders.Length > 0 )
-            {
-                if (colliders[0].CompareTag("BrokenGlass") && !invinicble)
-                {
                     points -= 10;
                     StartCoroutine(sinvincible());
                 }
