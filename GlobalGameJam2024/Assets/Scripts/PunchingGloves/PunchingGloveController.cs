@@ -84,6 +84,7 @@ namespace GlobalGameJam2024
         {
             DisappearFX?.SetActive(false);
             TextChangeFX?.SetActive(false);
+            textMesh.text = joke;
             hasPunched = false;
             hitPlayer = false;
         }

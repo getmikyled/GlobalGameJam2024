@@ -73,13 +73,13 @@ namespace GlobalGameJam2024
                 BrokenGlassCheck();
                 Move(hvalue, jump);
 
-                if (points == 0)
+                if (points <= 0)
                 {
                     Destroy(GameObject.Find("Player"));
                     Time.timeScale = 0;
                     GameOver();
                 }
-                if (points == 100 && !isKnockbacked)
+                if (points >= 100 && !isKnockbacked)
                 {
                     Destroy(GameObject.Find("Player"));
                     Time.timeScale = 0;
@@ -87,7 +87,7 @@ namespace GlobalGameJam2024
                 }
             }
         }
-
+        
         void GroundCheck()
         {
             isGrounded = false;
@@ -166,7 +166,10 @@ namespace GlobalGameJam2024
 
             rb.AddForce(forceDirection * punchStrength, ForceMode2D.Impulse);
 
-            yield return new WaitUntil(() => Mathf.Abs(rb.velocity.x) == 0);
+            if (rb != null)
+            {
+                yield return new WaitUntil(() => Mathf.Abs(rb.velocity.x) == 0);
+            }
             
             isKnockbacked = false;
         }
