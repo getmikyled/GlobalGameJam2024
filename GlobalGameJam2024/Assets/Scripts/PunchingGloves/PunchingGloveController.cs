@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -21,6 +22,12 @@ namespace GlobalGameJam2024
         [SerializeField] GameObject DisappearFX;
         [SerializeField] GameObject TextChangeFX;
 
+        [Space]
+        [SerializeField] string joke;
+        [SerializeField] string punchLine;
+        [SerializeField] TextMeshPro textMesh;
+
+
         [SerializeField] Animator animator;
 
         private bool hasPunched = false;
@@ -32,6 +39,11 @@ namespace GlobalGameJam2024
         {
             hasPunched = true;
             animator.Play("GlovePunching");
+        }
+
+        private void Start()
+        {
+            textMesh.text = joke;
         }
 
         private void OnCollisionEnter2D(Collision2D other)
@@ -52,6 +64,7 @@ namespace GlobalGameJam2024
         private void DisplayPunchline()
         {
             TextChangeFX.SetActive(true);
+            textMesh.text = punchLine;
         }
 
         private IEnumerator OnPunchCallBack()
