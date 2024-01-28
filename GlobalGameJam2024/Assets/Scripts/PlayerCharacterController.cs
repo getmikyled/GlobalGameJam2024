@@ -150,10 +150,10 @@ namespace GlobalGameJam2024
         public IEnumerator Knockback(Vector3 forceDirection, float punchStrength)
         {
             isKnockbacked = true;
+            points += 10;
             rb.AddForce(forceDirection * punchStrength, ForceMode2D.Impulse);
             yield return new WaitUntil(() => Mathf.Abs(rb.velocity.x) == 0);
             isKnockbacked = false;
-            points += 10;
         }
     }
 }
